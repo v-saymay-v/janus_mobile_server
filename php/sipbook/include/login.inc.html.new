@@ -1,0 +1,323 @@
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/reset.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="css/login_layout.css" media="all" />
+
+		<!-- Common -->
+		<script type="text/javascript" src="./js/utils.js"></script>
+		<script>
+		function $(selector) {
+			if (document.querySelector) {
+				return document.querySelector(selector);
+			} else {
+				return document.getElementById(selector.substr(1));
+			}
+		}
+		</script>
+
+		<!-- Facebook -->
+		<script>
+		// This is called with the results from from FB.getLoginStatus().
+		function statusChangeCallback(response) {
+			console.log('statusChangeCallback');
+			console.log(response);
+			// The response object is returned with a status field that lets the
+			// app know the current login status of the person.
+			// Full docs on the response object can be found in the documentation
+			// for FB.getLoginStatus().
+			if (response.status === 'connected') {
+				// Logged into your app and Facebook.
+				testAPI();
+			} else {
+				// The person is not logged into your app or we are unable to tell.
+				document.getElementById('facebook_status').innerHTML = 'Please log into this app.';
+			}
+		}
+
+		// This function is called when someone finishes with the Login
+		// Button.  See the onlogin handler attached to it in the sample
+		// code below.
+		function checkLoginState() {
+			FB.getLoginStatus(function(response) {
+				statusChangeCallback(response);
+			});
+		}
+
+		function loginFacebook() {
+			FB.login(function(response) {
+				statusChangeCallback(response);
+			}, {scope: 'public_profile,email'});
+		}
+
+		window.fbAsyncInit = function() {
+			FB.init({
+				appId      : '653667311806856',
+				cookie     : true,	// enable cookies to allow the server to access 
+									// the session
+				xfbml      : true,	// parse social plugins on this page
+				version    : 'v4.0' // The Graph API version to use for the call
+			});
+		
+		 // Now that we've initialized the JavaScript SDK, we call 
+		 // FB.getLoginStatus().  This function gets the state of the
+		 // person visiting this page and can return one of three states to
+		 // the callback you provide.  They can be:
+		 //
+		 // 1. Logged into your app ('connected')
+		 // 2. Logged into Facebook, but not your app ('not_authorized')
+		 // 3. Not logged into Facebook and can't tell if they are logged into
+		 //    your app or not.
+		 //
+		 // These three cases are handled in the callback function.
+		
+			FB.getLoginStatus(function(response) {
+			//	statusChangeCallback(response);
+			});
+		};
+
+		// Load the SDK asynchronously
+		(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id))
+				return;
+			js = d.createElement(s);
+			js.id = id;
+			js.src = "https://connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	
+		// Here we run a very simple test of the Graph API after login is
+		// successful.  See statusChangeCallback() for when this call is made.
+		function testAPI() {
+			console.log('Welcome!  Fetching your information.... ');
+			FB.api('/me', function(response) {
+				console.log('Successful login for: ' + response.name);
+				document.getElementById('facebook_status').innerHTML =
+					'Thanks for logging in, ' + response.name + '!';
+				FB.api('/'+response.id+'?fields=picture', function(response) {
+					document.getElementById('facebook_image').setAttribute('src', response.picture.data.url);
+				});
+			});
+			FB.getLoginStatus(function(response) {
+				if (response.status === 'connected') {
+				    // The user is logged in and has authenticated your
+				    // app, and response.authResponse supplies
+				    // the user's ID, a valid access token, a signed
+				    // request, and the time the access token 
+				    // and signed request each expire.
+				    var uid = response.authResponse.userID;
+				    var accessToken = response.authResponse.accessToken;
+					localStorage.setItem("oauth_token", accessToken);
+					loginToBizCard('facebook', accessToken, '', uid, '');
+				} else if (response.status === 'not_authorized') {
+				    // The user hasn't authorized your application.  They
+				    // must click the Login button, or you must call FB.login
+				    // in response to a user gesture, to launch a login dialog.
+				} else {
+				    // The user isn't logged in to Facebook. You can launch a
+				    // login dialog with a user gesture, but the user may have
+				    // to log in to Facebook before authorizing your application.
+				}
+			});
+		}
+		</script>
+
+		<!-- Google -->
+		<script type="text/javascript" src="https://apis.google.com/js/api.js"></script>
+		<script>
+		function onLoadGoogle() {
+			const googleApiKey = 'AIzaSyBMy3vJZlHUQQy1CvQrbu1Fawhify9EkRY';
+			const googleClientId = '129302276832-r5tb1rd0aurbrm7hlkc29u04hpfqvupf.apps.googleusercontent.com';
+			const googleScope = 'https://www.googleapis.com/auth/userinfo.profile';
+		    gapi.load('client', function() {
+		        gapi.client.init({
+		            apiKey: googleApiKey,
+		            clientId: googleClientId,
+		            scope: googleScope
+		        }).then(function() {
+		            console.log("gapi loaded.");
+		        })
+		    });
+		}
+
+		function loginGoogle() {
+		    gapi.auth2.getAuthInstance().signIn().then(function(obj) {
+				if (!obj.error) {
+					// 認証に成功
+					localStorage.setItem("oauth_token", obj.Zi.access_token);
+					document.getElementById('google_status').innerHTML = "Success: " + obj.w3.U3;
+					document.getElementById('google_image').setAttribute('src', obj.w3.Paa);
+					loginToBizCard('google', obj.Zi.access_token, '', obj.El, '');
+		        } else {
+		        	// 認証に失敗
+		            document.getElementById('google_status').innerHTML = "Error: " + obj.error;
+		        }
+		    });
+		}
+		</script>
+
+		<!-- Twitter -->
+		<script type="text/javascript" src="./js/accessTwitter.js"></script>
+		<script>
+		function onLoadTwitter() {
+			if (!localStorage.getItem("oauth_verifier") ||
+				!localStorage.getItem("oauth_token") ||
+				!localStorage.getItem("oauth_token_secret")) {
+		        getTokenKeys("request_token");
+		    } else {
+				if (localStorage.getItem("twitter_name"))
+					document.getElementById('twitter_status').innerHTML = "Success: " + localStorage.getItem("twitter_name");
+				if (localStorage.getItem("twitter_profile_image_url"))
+					document.getElementById('twitter_image').setAttribute('src', localStorage.getItem("twitter_profile_image_url"));
+		    }
+		}
+
+		function loginTwitter() {
+	        getTokenKeys("request_token");
+		}
+		</script>
+
+		<!-- HotBiz -->
+		<script>
+		function loginHotBiz() {
+			var loginDiv = document.getElementById('login_form');
+			show_(loginDiv);
+			var loginBtn = $("#loginbtn");
+			loginBtn.addEventListener("click", function() {
+				var loginUrl = $("#hotbizurl");
+				var loginId = $("#loginid");
+				var loginPw = $("#loginpw");
+				var url = loginUrl.value;
+				var id = loginId.value;
+				var pw = loginPw.value;
+				if (!url || url == '') {
+					alert('HotBiz8のURLが入力されていません。');
+					return
+				}
+				if (!id || id == '') {
+					alert('HotBiz8のユーザーIDが入力されていません。');
+					return
+				}
+				if (!pw || pw == '') {
+					alert('HotBiz8のパスワードが入力されていません。');
+					return
+				}
+				loginDiv.classList.add("hidden");
+				loginToHotBiz(url, id, pw, function(err, hotbiz, userid, name, session, blob) {
+					if (err) {
+						alert(err);
+						loginDiv.classList.remove("hidden");
+					} else {
+					//	location.href = "index.html";
+						var url = window.URL || window.webkitURL;
+						document.getElementById('hotbiz_status').innerHTML = "Success: " + name;
+						document.getElementById('hotbiz_image').setAttribute('src', url.createObjectURL(blob));
+						localStorage.setItem("oauth_token", session);
+						localStorage.setItem("oauth_userid", userid);
+						loginToBizCard('hotbiz', session, '', userid, hotbiz);
+					}
+				});
+			});
+		}
+		</script>
+
+		<script>
+		function onLoad() {
+			onLoadGoogle();
+			//onLoadTwitter();
+		}
+		</script>
+  	</head>
+<!--  	         
+  	<body>
+  		<div id="container">
+  			<div id="top"></div>
+        <div id="header"><a href="."><img width="340" height="75" src="title_x2.png" title="<?= ucfmsg('ADDRESS_BOOK') ?>" alt="<?= ucfmsg('ADDRESS_BOOK') ?>" /></a></div>
+  			<div id="nav"></div>
+  			<div id="content">
+  	      <form accept-charset="utf-8" id="LoginForm" name="LoginForm" method="post">
+  	         <label><?= ucfmsg('USER'); ?>:</echo></label><input name="user" tabindex="0"/><br/>
+  	         <label><?= ucfmsg('PASSWORD'); ?>:</label><input name="pass" type="password"/><br/>
+  	         <input type=submit value="<?= ucfmsg('LOGIN'); ?>"/><br><br>
+          </form>
+  <script type="text/javascript">
+    document.LoginForm.user.focus();
+  </script>
+  	         <a href="register"><?= ucfmsg('CREATE_ACCOUNT'); ?></a>
+<!!--  	         
+  	       | <a href="register/email_password.php"><?= ucfmsg('FORGOT_PASSWORD'); ?></a>
+  -- >
+
+  	         <br><br>
+  	         <br>
+  	         <hr>
+<?php if($use_sso) { ?>  	         
+  	         <br><br>
+
+  	      <form accept-charset="utf-8" id="hLoginForm" name="hLoginForm" method="post">
+  	         <input name="user" type="hidden"/>
+  	         <input name="pass" type="hidden"/>
+          </form>
+
+  	         <label><?= ucfmsg('SIGN_IN_WITH'); ?></label>
+  	         <a href="javascript:hLoginForm.user.value='Facebook';hLoginForm.submit();"><img src="icons/facebook.png"></a>
+  	         <a href="javascript:hLoginForm.user.value='Google';hLoginForm.submit();"><img src="images/google.png" width="32" height="32"></a>
+  	         <a href="javascript:hLoginForm.user.value='Twitter';hLoginForm.submit();"><img src="images/twitter.png" width="32" height="32"></a>
+  	         <a href="javascript:hLoginForm.user.value='HotBiz8';hLoginForm.submit();"><img src="images/hotbiz.png" width="32" height="32"></a>
+  	         <br><br><br>
+<?php } ?>
+
+  	         <b>New features</b>
+  	         	<ul>- Connect your iPhone using <a href="http://simultaneouspancakes.com/Lessons/2010/06/24/connecting-an-iphone-4-to-exchange/">Exchange suppport</a></ul>
+  	         	<ul>- Connect your Android using <a href="http://portal.smartertools.com/KB/a1148/setup-an-android-phone-or-tablet-for-exchange-activesync.aspx">Exchange suppport</a></ul>
+
+<!!--
+  	         <br>
+  	         <b>Support</b>
+  	         	<ul>
+  	         	<li>- Send us a mail to <a href="mailto:support@swiss-addressbook.com">support(at)swiss-addressbook.com</a></li>
+  	         	</ul>
+-- >
+  <script>				
+    document.LoginForm.user.focus();
+  </script>
+        </div>
+-->
+	<body onload="onLoad()">
+		<div id="login-select">
+			<div class="dtable">
+				<button class="dtable_c facebook-back sns-button" onclick="loginFacebook()"><img src="images/facebook.png" width="96" height="96" border="0"></button>
+				<button class="dtable_c twitter-back sns-button" onclick="loginTwitter()"><img src="images/twitter.png" width="96" height="96" border="0"></button>
+			</div>
+			<div class="dtable">
+				<button class="dtable_c google-back sns-button" onclick="loginGoogle()"><img src="images/google.png" width="96" height="96" border="0"></button>
+				<button class="dtable_c hotbiz-back sns-button" onclick="loginHotBiz()"><img src="images/logo_login.png" width="96" height="26" border="0"></button>
+			</div>
+			<img id="facebook_image">
+			<div id="facebook_status"></div>
+			<img id="google_image">
+			<div id="google_status"></div>
+			<img id="twitter_image">
+			<div id="twitter_status"></div>
+			<img id="hotbiz_image">
+			<div id="hotbiz_status"></div>
+		</div>
+
+		<div id="login_form" class="hidden">
+			<div class="dialog_back"></div>
+			<div class="login-div">
+				<div id="logoarea"><img src="images/logo_login.png" title="HotBiz &#169; ASJ Inc. 2001-2018 All Rights Reserved." alt="HotBiz &#169; ASJ Inc. 2001-2018 All Rights Reserved." /></div>
+				<div class="login_url">
+					<input type="text" id="hotbizurl" class="text" name="url" placeholder="HotBiz8のURL(例：https://asp11.hotbiz.jp/hbu3202/)" value="" />
+				</div>
+				<div class="login_address">
+					<input type="text" id="loginid" class="text" name="user" placeholder="ユーザー名" value="" />
+				</div>
+				<div class="login_pass">
+					<input type="password" id="loginpw" class="password" name="pass" placeholder="パスワード" value="" />
+				</div>
+				<div class="login_button">
+					<input type="button" id="loginbtn" class="loginbtn" name="login" value="" />
+				</div>
+			</div>
+		</div>

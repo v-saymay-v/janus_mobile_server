@@ -1,0 +1,1704 @@
+#main_form{
+	min-width:600px;
+	margin:10px;
+	padding:5px 10px 20px;
+	background:#eee;
+	border:1px solid #aaa;
+	zoom:1;
+}
+#main_form ul.contents-list{
+	table-layout:auto;
+}
+dl.form dt{
+	width:100%;
+	margin-bottom:10px;
+	padding:3px 5px 0;
+	box-sizing:border-box;
+	font-weight:bold;
+}
+dl.form dt:not(:first-child){
+	border-top:1px #ccc solid;
+}
+
+	dl.form dt span.s_text{
+		margin-left:5px;
+		color:#666;
+		font-weight:normal;
+		font-size:90%;
+	}
+dl.form dd{
+	padding:0 5px;
+    word-break: break-all;
+}
+dl.form dd:not(:last-child){
+	margin-bottom:20px;
+}
+dl.form > dd:last-child:after{
+	display:block;
+	height:20px;
+	border-bottom:1px #ccc solid;
+	content:"";
+}
+/* ���[���A�J�E���g */
+dl.form > dd.check_dd:last-child:after{
+	display:none;
+}
+dl.form dd.check_dd{
+	margin-bottom:10px;
+}
+dl.form dd:last-child.check_dd{
+	padding-bottom:10px;
+	border-bottom:1px #ccc solid;
+}
+	#main_form ul.personal_mailsetting li span.list_name{
+		line-height:1.5;
+	}
+dl.form dd select,
+select.dropdown,
+.dlTable-pc select{
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	position:relative;
+	width:auto;
+	background:#fff url("./icon_select_arrow_btm.png");
+	background-repeat:no-repeat;
+	background-position:center right 5px;
+	padding-right:21px !important;
+	border:1px solid #777;
+	border-radius:3px;
+	box-sizing:border-box;
+}
+dl.form dd select.is-error,
+select.dropdown.is-error,
+.dlTable-pc select.is-error{
+	background-color:#ffe5e5;
+	border-color:#dd3333;
+}
+select::-ms-expand{
+	display:none;
+}
+
+.main_form_box{
+	padding:5px 3px 0;
+	border-bottom:1px #ccc solid;
+}
+
+/*form input type text*/
+input[type="text"],
+input[type="password"],
+input[type="tel"],
+input[type="url"],
+input[type="email"],
+input[type="search"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="number"],
+textarea{
+	position:relative;
+	max-width:100%;
+	padding:5px;
+	background:#fff;
+	background:-webkit-gradient(linear, center top, center bottom, from(#eee), to(#fff));
+	background:-webkit-linear-gradient(top, #eee, #fff);
+	background:linear-gradient(to bottom, #eee, #fff);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#eeeeee', endColorstr = '#ffffff');
+	border:1px solid #777;
+	border-radius:3px;
+	box-sizing:border-box;
+}
+input[type="text"].is-error,
+input[type="password"].is-error,
+input[type="tel"].is-error,
+input[type="url"].is-error,
+input[type="email"].is-error,
+input[type="search"].is-error,
+input[type="datetime"].is-error,
+input[type="datetime-local"].is-error,
+input[type="date"].is-error,
+input[type="month"].is-error,
+input[type="week"].is-error,
+input[type="time"].is-error,
+input[type="number"].is-error,
+textarea.is-error{
+	background:#ffe5e5;
+	border-color:#dd3333 !important;
+}
+#main_form .dropdown,
+#main_form select,
+select.dropdown,
+.dlTable-pc select{
+	max-width:100%;
+	margin-right:5px;
+	padding:5px 3px;
+}
+textarea{
+	height:100px;
+	resize:vertical;
+}
+.original_form textarea{
+	height:auto;
+}
+.textarea-big{
+	height:200px;
+}
+input[name="title"]{
+	width:100%;
+	max-width:590px;
+}
+#main_form:not(.original_form) .text,
+#main_form:not(.original_form) textarea,
+#main_form:not(.original_form) .number{
+	width:100%;
+	max-width:590px;
+}
+.setting_form .text,
+.setting_form .pass,
+.setting_form .mail,
+.setting_form .url,
+.setting_form .tel,
+.setting_form textarea,
+.setting_form .mailaddress,
+input.comment_text{
+	width:300px;
+}
+#main_form .client{
+	width:145px;
+}
+#main_form .hasDatepicker{
+	width:145px;
+	margin-right:5px;
+}
+#main_form .time,
+#main_form .timepicker{
+	width:100px;
+}
+#main_form .where,
+#main_form .image_filename{
+	width:60%;
+}
+#main_form .select_tel{
+	width:85%;
+}
+#main_form .timepicker{
+	margin-left:5px;
+}
+#main_form .tel{
+	width:25%;
+}
+#main_form .url{
+	width:85%;
+	margin-left:5px;
+}
+#main_form .space{
+	margin-top:5px;	
+}
+#main_form .number,
+.setting_select .period,
+.setting_form .itemnumber{
+	width:70px;
+}
+#main_form .unit{
+	width:120px;
+}
+#main_form .iconname{
+	width:130px;
+}
+.setting_form .mailtitle{
+	width:150px;
+	border:1px solid #ccc;
+}
+.setting_form .mailaddress{
+	width:220px;
+}
+.setting_form .postal{
+	width:50px;
+}
+.setting_form textarea.p_comment{
+	height:100px;
+}
+
+/*form z-index*/
+.ui-datepicker{
+	z-index:1000 !important;
+}
+
+/*form input type radio*/
+#main_form .address{
+	margin-right:10px;
+}
+
+/*form button*/
+#main_form_button{
+	clear:both;
+	margin:30px 0 10px;
+	text-align:center;
+}
+
+/*input file*/
+.file_select{
+	position:relative;
+	display:inline-block;
+	margin:0;
+	padding:2px 8px;
+	background:#ddd;
+	background:-webkit-gradient(linear, center top, center bottom, from(#fff), to(#ccc));
+	background:-webkit-linear-gradient(top, #fff 0%, #ccc 100%);
+	background:linear-gradient(to bottom, #fff 0%, #ccc 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#cccccc');
+	border:1px solid #858585;
+	border-radius:3px;
+	font-size:13px;
+	overflow:hidden;
+	cursor:pointer;
+}
+
+/*ul list*/
+#main_form ul.datetime_addlist,
+#main_form ul.facility_addlist{
+	margin-bottom:10px;
+	background:#fff;
+	border:1px solid #888;
+	border-radius:3px;
+	overflow:hidden;
+}
+#main_form ul.personal_mailsetting{
+	width:100%;
+	margin-bottom:10px;
+	overflow:hidden;
+}
+
+#main_form ul.datetime_addlist li,
+.member_addlist li,
+#main_form ul.facility_addlist li,
+#main_form ul.personal_mailsetting li{
+	overflow:hidden;
+}
+	#main_form ul.datetime_addlist li span,
+	.member_addlist li span,
+	#main_form ul.facility_addlist li span,
+	#main_form ul.personal_mailsetting li span{
+		float:left;
+		line-height:25px;
+	}
+	#main_form ul.datetime_addlist li span.checkboxarea,
+	.member_addlist li span.checkboxarea,
+	#main_form ul.facility_addlist li span.checkboxarea,
+	#main_form ul.personal_mailsetting li span.checkboxarea{
+		width:28px;
+		background:none;
+	}
+
+	#main_form ul.personal_mailsetting li span.checkboxarea{
+		width:auto;
+	}
+
+	#main_form ul.datetime_addlist li span.list_name,
+	.member_addlist li span.list_name,
+	#main_form ul.facility_addlist li span.list_name,
+	#main_form ul.personal_mailsetting li span.list_name{
+		margin-left:6px;
+		margin-right:6px;
+	}
+	#main_form ul.personal_mailsetting li span.list_name{
+		width:85%;
+	}
+	.member_addlist li span.list_department{
+		width:250px;
+		color:#999;
+		font-size:80%;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+		overflow:hidden;
+	}
+	.member_addlist li input.radiobox{
+		float:left;
+		margin-right:0;
+	}
+
+#main_form ul.form_textlist li{
+	display:block;
+	color:#555;
+	font-size:12px;
+	overflow:hidden;
+}
+
+/*----------------------------------------------------------�\������ */
+.form_timeselect ul{
+	overflow:hidden;
+}
+.form_timeselect ul li{
+	float:left;
+}
+p.form_allday{
+	float:left;
+	margin:2px 10px 0 0;
+}
+p.form_allday input{
+	margin-right:5px;
+}
+
+/*----------------------------------------------------------member select list*/
+.member_addlist{
+	margin-top:45px;
+	background:#fff;
+	border:1px solid #aaa;
+	border-radius:3px;
+	overflow:hidden;
+	cursor:pointer;
+}
+.find-tab-list .member_addlist{
+	max-width:960px;
+	margin:16px auto;
+}
+.member_addlist li span.list_name{
+	width:250px;
+	padding:2px 0;
+	color:#000;
+	font-size:13px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}
+	.member_addlist li span.list_delete a{
+		display:inline-block;
+		width:26px;
+		padding:2px 0;
+		background:url("./i_delete.png") no-repeat 5px 50%;
+		color:#000;
+		text-indent:-9999px;
+	}
+		.member_addlist li span.list_delete a:hover{
+			opacity:0.60;
+		}
+		.member_addlist li:hover{
+			background:#eee;
+		}
+#main_form ul.member_sort li,
+#main_form ul.member_sort li:hover{
+	background-position:35px 50%;
+}
+#main_form ul.member_sort .f_handle{
+	display:block;
+	float:left;
+	width:25px;
+	height:25px;
+	margin:2px 0 0 5px;
+	background:url("./i_handle_sort_folder.gif") no-repeat center center #999;
+	text-indent:-9999px;
+	cursor:move;
+}
+	.member_addlist li span{
+		float:left;
+		line-height:25px;
+	}
+
+.addselectlist{
+	margin-top:45px;
+	background:#fff;
+	border:1px solid #aaa;
+	border-radius:3px;
+	overflow:hidden;
+	cursor:pointer;
+}
+.addselectlist li span:not(:first-child){
+	display:inline-block;
+	vertical-align:middle;
+	margin-left:6px;
+	padding:2px 0;
+	color:#000;
+	font-size:13px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}
+	.addselectlist li span.list_delete a{
+		display:inline-block;
+		width:26px;
+		padding:2px 0;
+		background:url("./i_delete.png") no-repeat 5px 50%;
+		color:#000;
+		text-indent:-9999px;
+	}
+		.addselectlist li span.list_delete a:hover{
+			opacity:0.60;
+		}
+		.addselectlist li:hover{
+			background:#eee;
+		}
+.list_pr_name,
+.list_task_name,
+.list_checklist_name{
+	width:29%;
+}
+.list_progress{
+	width:40px;
+	text-align:right;
+}
+
+/*----------------------------------------------------------att area*/
+#main_form .attlist{
+	margin:10px 0;
+	padding:5px;
+	background:#fff;
+	border:1px solid #aaa;
+	border-radius:3px;
+	overflow:hidden;
+}
+#main_form .attlist p{
+	color:#cc0000;
+	font-size:12px;
+}
+
+/*----------------------------------------------------------forum form*/
+#main_form dd.forum_title{
+	font-weight:bold;
+}
+#main_form span.number_reply{
+	color:#0099bb;
+}
+#main_form textarea.forumarea,
+#main_form textarea.mailarea{
+	height:200px;
+}
+#main_form textarea.schearea{
+	height:100px;
+}
+
+/*----------------------------------------------------------mail form*/
+#mail_control{
+	max-width:620px;
+	margin:10px auto -10px;
+	background:#000;
+	border:1px solid #444;
+}
+#mail_control + #main_form{
+	max-width:600px;
+	margin-left:auto;
+	margin-right:auto;
+}
+#mail_control ul{
+	overflow:hidden;
+}
+#mail_control ul li{
+	float:left;
+}
+	#mail_control ul li a{
+		display:block;
+		position:relative;
+		width:60px;
+		height:65px;
+		padding:0 3px;
+		background:no-repeat 50% 25%;
+		background-size:40px;
+		border-right:1px #666 solid;
+		color:#fff;
+	}
+	#mail_control ul li a:hover{
+		opacity:0.80;
+	}
+		#mail_control ul li a.mail_send{
+			background-image:url("./icon_mail_send.png");
+		}
+		#mail_control ul li a.mail_draft{
+			background-image:url("./icon_mail_draft.png");
+		}
+		#mail_control ul li a.mail_sign{
+			background-image:url("./icon_mail_sign.png");
+		}
+		#mail_control ul li a.mail_important{
+			background-image:url("./icon_mailedit_important.png");
+			background-size:8px;
+		}
+		#mail_control ul li a.mail_important span:after{
+			background-image:url("./icon_mailedit_important.png");
+			background-size:8px;
+		}
+		#mail_control ul li a.mail_important_normal{
+			background-image:url("./icon_mailedit_important_normal.png");
+			background-size:8px;
+		}
+		#mail_control ul li a.mail_important_normal span:after{
+			background-image:url("./icon_mailedit_important_normal.png");
+			background-size:8px;
+		}
+
+	#mail_control ul li span{
+		display:block;
+		position:absolute;
+		bottom:0px;
+		line-height:20px;
+		width:60px;
+		font-size:12px;
+		text-align:center;
+	}
+	#mail_control ul li.mail_important_box{
+		float:right;
+	}
+	#mail_control ul li.mail_important_box a{
+		border-right:none;
+		border-left:1px #666 solid;
+	}
+	#mail_control ul li a.mail_important span,
+	#mail_control ul li a.mail_important_normal span{
+		text-indent:6px;
+		text-align:left;
+		background:url(./icon_important_link.png) 48px 50% / 8px no-repeat;
+	}
+	#mail_control ul li.mail_important_box.open span,
+	#mail_control ul li a.mail_important_normal.open span{
+		text-indent:6px;
+		text-align:left;
+		background:url(./icon_reverse_important_link.png) 48px 50% / 8px no-repeat;
+	}
+	.important_select{
+		width:68px;
+		background:#000;
+		display:none;
+		position:absolute;
+		border-top:1px dotted #666666;
+	}
+	.important_select li{
+		width:100%;
+		height:25px;
+		line-height:25px;
+		border-bottom:1px dotted #666666;
+		color:#fff;
+		overflow:hidden;
+		background: url(./icon_imp_link.png) 5px 50% / 4px no-repeat;
+		text-indent:10px;
+		cursor:pointer;
+	}
+		.important_select li.radio_normal.on{
+			background: url(./icon_imp_link.png) 5px 50% / 4px no-repeat , #00B285;
+		}
+		.important_select li.radio_important.on{
+			background: url(./icon_imp_link.png) 5px 50% / 4px no-repeat , #FF0000;
+		}
+		.important_select li:hover{
+			background: url(./icon_imp_link.png) 5px 50% / 4px no-repeat , #666;
+		}
+	.important_select li label{
+		width:100%;
+		cursor:pointer;
+		display:block;
+	}
+
+	.important_select li input{
+		display:none;
+	}
+
+#main_form .destination{
+	width:85%;
+	margin-top:5px;
+	margin-left:1%;
+}
+.destination_button{
+	width:14%;
+	margin-top:5px;
+	padding:6px 0;
+	background:#ddd;
+	background:-webkit-gradient(linear, center top, center bottom, from(#fff), to(#b3b3b3));
+	background:-webkit-linear-gradient(top, #fff 0%, #b3b3b3 100%);
+	background:linear-gradient(to bottom, #fff 0%, #b3b3b3 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#b3b3b3');
+	border:1px solid #858585;
+	border-radius:3px;
+	color:#000;
+	font-size:12px;
+	cursor:pointer;
+}
+
+/* ���[���A�J�E���g 1�����Ȃ��ꍇ���W�I�{�^�������\�� */
+#main_form ul.personal_mailsetting li span.one_address .label-radio .lever:before{
+	display:none;
+}
+
+/* -----------------------------------------------------------------------------------�y�[�W���E�B���h�E���C�A�E�g */
+#plan_regular{
+	overflow:hidden;
+}
+	.form_editbox p.li_close{
+		display:block;
+		position:absolute;
+		top:15px;
+		right:15px;
+		z-index:1;
+		width:16px;
+		height:16px;
+		background:url("./btn_schedule_close.gif") no-repeat;
+		text-indent:-9999px;
+		cursor:pointer;
+	}
+	.form_editbox p.li_title{
+		width:100%;
+		margin-top:-22px;
+		padding-bottom:6px;
+		background:#fff;
+		border-bottom:1px solid #ccc;
+		color:#666;
+		font-size:15px;
+	}
+	.form_editbox p.li_add{
+		display:block;
+		clear:both;
+		margin:15px 0 5px;
+		text-align:center;
+	}
+.form_editbox p.li_add:last-child:after{
+	display:block;
+	padding-top:16px;
+	content:"";
+}
+.form_editbox table{
+	width:100%;
+	margin:10px 0px;
+}
+	.form_editbox table th{
+		width:60px;
+		padding:3px 5px;
+		text-align:right;
+	}
+	.form_editbox table td{
+		width:auto;
+		padding:3px 5px;
+	}
+
+/* ���ڒ��� */
+	.form_editbox table td p{
+		margin-bottom:3px;
+	}
+
+.form_editbox{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	position:fixed;
+	top:15%;
+	right:0;
+	left:0;
+	margin:auto;
+	z-index:100;
+	width:90%;
+	max-height:60%;
+	padding:32px 10px 10px;
+	background:#fff;
+	border-radius:5px;
+	box-shadow:0 0 6px #555;
+	overflow-y:auto;
+}
+.form_editbox > *{
+	max-width:100%;
+	flex:0 0 auto;
+}
+.form_editbox .form_editbox,
+.modal-cross{
+	top:18%;
+	width:80% !important;
+	max-height:54% !important;
+}
+.modal-cross .form_editbox{
+	top:21%;
+	width:70% !important;
+	max-height:48% !important;
+}
+.form_editbox .select_editbox{
+	overflow:visible;
+}
+
+@media screen and (min-width: 960px) {
+	.form_editbox{
+		width:60%;
+	}
+	.form_editbox .form_editbox,
+	.modal-cross{
+		width:54% !important;
+	}
+	.modal-cross .form_editbox{
+		width:48% !important;
+	}
+}
+
+/* ----------------------------------------------------------------------------------- �I���E�ǉ� */
+.form_select{
+	position:relative;
+	min-height:40px;
+	margin-bottom:10px;
+	overflow:hidden;
+}
+.form_select p.formbtn_open{
+	position:absolute;
+	line-height:32px;
+	width:140px;
+	padding:3px 0;
+	border:1px solid #aaa;
+	border-radius:5px;
+	color:#0099bb;
+	text-align:center;
+	text-indent:35px;
+	font-size:13px;
+	cursor:pointer;
+}
+.form_select p.formbtn_open:hover{
+		border:1px solid #bbb;
+		color:#77ccee;
+}
+.form_select p.select_member{
+	float:none;
+}
+.form_select p.formbtn_title{
+	position:absolute;
+	line-height:25px;
+	width:140px;
+	padding:3px 0;
+	background:#008c52;
+	border-radius:3px;
+	color:#fff;
+	text-align:center;
+}
+
+/* ���p�ݔ��I�� */
+p.select_setubi{
+	background:#ddd url("./i_select_setubi.png") no-repeat 5px 50%;
+	background:url("./i_select_setubi.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#ddd), color-stop(0.5, #fff), to(#ccc));
+	background:url("./i_select_setubi.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+	background:url("./i_select_setubi.png") no-repeat 5px 50%, linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+}
+	p.select_setubi:hover{
+		background:#eee url("./i_select_setubi.png") no-repeat 5px 50%;
+		background:url("./i_select_setubi.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(0.5, #fff), to(#ddd));
+		background:url("./i_select_setubi.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+		background:url("./i_select_setubi.png") no-repeat 5px 50%, linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+	}
+
+/* �O���[�v�ǉ� */
+p.select_group{
+	background:#ddd url("./i_add_group.png") no-repeat 5px 50%;
+	background:url("./i_add_group.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#ddd), color-stop(0.5, #fff), to(#ccc));
+	background:url("./i_add_group.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+	background:url("./i_add_group.png") no-repeat 5px 50%, linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+}
+	p.select_group:hover{
+		background:#eee url("./i_add_group.png") no-repeat 5px 50%;
+		background:url("./i_add_group.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(0.5, #fff), to(#ddd));
+		background:url("./i_add_group.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+		background:url("./i_add_group.png") no-repeat 5px 50%, linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+	}
+
+/* �����o�[�I�� */
+p.select_member{
+	background:#ddd url("./i_add_member.png") no-repeat 5px 50%;
+	background:url("./i_add_member.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#ddd), color-stop(0.5, #fff), to(#ccc));
+	background:url("./i_add_member.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+	background:url("./i_add_member.png") no-repeat 5px 50%, linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+}
+p.select_member:hover{
+	background:#eee url("./i_add_member.png") no-repeat 5px 50%;
+	background:url("./i_add_member.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(0.5, #fff), to(#ddd));
+	background:url("./i_add_member.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+	background:url("./i_add_member.png") no-repeat 5px 50%, linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+}
+
+/* �t�@�C���I�� */
+p.select_file{
+	background:#ddd url("./i_add_file.png") no-repeat 5px 50%;
+	background:url("./i_add_file.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#ddd), color-stop(0.5, #fff), to(#ccc));
+	background:url("./i_add_file.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+	background:url("./i_add_file.png") no-repeat 5px 50%, linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+}
+	p.select_file:hover{
+		background:#eee url("./i_add_file.png") no-repeat 5px 50%;
+		background:url("./i_add_file.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(0.5, #fff), to(#ddd));
+		background:url("./i_add_file.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+		background:url("./i_add_file.png") no-repeat 5px 50%, linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+	}
+
+/* ���K�ґI�� */
+p.select_visitor{
+	background:#ddd url("./i_link_visitor.png") no-repeat 5px 50%;
+	background:url("./i_link_visitor.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#ddd), color-stop(0.5, #fff), to(#ccc));
+	background:url("./i_link_visitor.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+	background:url("./i_link_visitor.png") no-repeat 5px 50%, linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+}
+	p.select_visitor:hover{
+		background:#eee url("./i_link_visitor.png") no-repeat 5px 50%;
+		background:url("./i_link_visitor.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(0.5, #fff), to(#ddd));
+		background:url("./i_link_visitor.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+		background:url("./i_link_visitor.png") no-repeat 5px 50%, linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+	}
+
+/* �\���I�� */
+p.select_sche{
+	background:#ddd url("./i_link_sche.png") no-repeat 5px 50%;
+	background:url("./i_link_sche.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#ddd), color-stop(0.5, #fff), to(#ccc));
+	background:url("./i_link_sche.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+	background:url("./i_link_sche.png") no-repeat 5px 50%, linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+}
+	p.select_sche:hover{
+		background:#eee url("./i_link_sche.png") no-repeat 5px 50%;
+		background:url("./i_link_sche.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(0.5, #fff), to(#ddd));
+		background:url("./i_link_sche.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+		background:url("./i_link_sche.png") no-repeat 5px 50%, linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+	}
+
+/* �\���ǉ� */
+p.add_sche{
+	background:#ddd url("./i_add_sche.png") no-repeat 5px 50%;
+	background:url("./i_add_sche.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#ddd), color-stop(0.5, #fff), to(#ccc));
+	background:url("./i_add_sche.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+	background:url("./i_add_sche.png") no-repeat 5px 50%, linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+}
+	p.add_sche:hover{
+		background:#eee url("./i_add_sche.png") no-repeat 5px 50%;
+		background:url("./i_add_sche.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(0.5, #fff), to(#ddd));
+		background:url("./i_add_sche.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+		background:url("./i_add_sche.png") no-repeat 5px 50%, linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+	}
+
+/* ToDo�I�� */
+p.select_todo{
+	background:#ddd url("./i_link_todo.png") no-repeat 5px 50%;
+	background:url("./i_link_todo.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#ddd), color-stop(0.5, #fff), to(#ccc));
+	background:url("./i_link_todo.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+	background:url("./i_link_todo.png") no-repeat 5px 50%, linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+}
+	p.select_todo:hover{
+		background:#eee url("./i_link_todo.png") no-repeat 5px 50%;
+		background:url("./i_link_todo.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(0.5, #fff), to(#ddd));
+		background:url("./i_link_todo.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+		background:url("./i_link_todo.png") no-repeat 5px 50%, linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+	}
+
+/* �񍐏��I�� */
+p.select_report{
+	background:#ddd url("./i_link_report.png") no-repeat 5px 50%;
+	background:url("./i_link_report.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#ddd), color-stop(0.5, #fff), to(#ccc));
+	background:url("./i_link_report.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+	background:url("./i_link_report.png") no-repeat 5px 50%, linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+}
+	p.select_report:hover{
+		background:#eee url("./i_link_report.png") no-repeat 5px 50%;
+		background:url("./i_link_report.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(0.5, #fff), to(#ddd));
+		background:url("./i_link_report.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+		background:url("./i_link_report.png") no-repeat 5px 50%, linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+	}
+
+/* �^�X�N�ǉ� */
+p.add_task{
+	background:#ddd url("./i_add_task.png") no-repeat 5px 50%;
+	background:url("./i_add_task.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#ddd), color-stop(0.5, #fff), to(#ccc));
+	background:url("./i_add_task.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+	background:url("./i_add_task.png") no-repeat 5px 50%, linear-gradient(to bottom, #ddd, #fff 50%, #ccc);
+}
+	p.add_task:hover{
+		background:#eee url("./i_add_task.png") no-repeat 5px 50%;
+		background:url("./i_add_task.png") no-repeat 5px 50%, -webkit-gradient(linear, left top, left bottom, from(#eee), color-stop(0.5, #fff), to(#ddd));
+		background:url("./i_add_task.png") no-repeat 5px 50%, -webkit-linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+		background:url("./i_add_task.png") no-repeat 5px 50%, linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+	}
+
+/* �I���E�ǉ����X�g */
+ul.form_linklist{
+	width:100%;
+	padding-left:143px;
+	box-sizing:border-box;
+	overflow:hidden;
+}
+ul.form_linklist li{
+	display:block;
+	float:left;
+	width:133px;
+	margin:6px;
+	padding:2px 8px 2px 26px;
+	background:url("./i_delete.png") no-repeat #fff 5px 50%;
+	border:1px solid #bbb;
+	border-radius:3px;
+	box-sizing:border-box;
+	color:#666;
+	font-size:13px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	cursor:pointer;
+}
+	ul.form_linklist li:hover{
+		background-color:#ddd;
+	}
+ul.form_linklist li label{
+	cursor:pointer;
+}
+
+/* �������X�g */
+ul.form_linklist_kizon li{
+	margin:0 6px 10px;
+	background:url("./i_delete.png") no-repeat #f0e68c 5px 50%;
+	border:1px dotted #bbb;
+}
+	ul.form_linklist_kizon li:hover{
+		background-color:#ffff6a;
+	}
+/* �������X�g �������� */
+ul.form_linklist_kizon li.nolink{
+	margin:0 6px 10px;
+	background:#f0e68c;
+}
+	ul.form_linklist_kizon li.nolink:hover{
+		background-color:#f0e68c;
+	}
+
+/* �t�@�C���o�^ */
+.select_filelistbox{
+	width:100%;
+}
+.files_attacharea{
+	display:none;
+}
+p.form_files_entry{
+	margin-top:10px;
+	padding:10px 0;
+}
+	p.form_files_entry input{
+		margin-left:5px;
+	}
+
+	.files_attacharea{
+		display:block;
+		position:relative;
+		margin:10px 0;
+		background:#f0f0f0;
+		border:3px solid #ccc;
+	}
+		.files_attacharea .dropzone-custom{
+			min-height:150px;
+			background:none;
+			border:none;
+		}
+			.files_attacharea .dropzone-custom .dz-default.dz-message{
+				max-width:309px;
+				max-height:36px;
+				margin-top:-18px;
+				margin-left:-155px;
+			}
+		.files_attacharea p.t_files_attacharea{
+			color:#999;
+			text-align:center;
+		}
+	p.form_files_entry{
+		border-top:1px dotted #aaa;
+	}
+
+
+ul.filelist li{
+	width:auto;
+}
+p.form_selectfile{
+	display:none;
+	margin:6px 0;
+}
+
+/* ���p�ݔ��Ȃǂ̑I�� �E�B���h�E��*/
+.search_date_title{
+	margin:5px 8px;
+}
+.search_searchbox{
+	overflow:hidden;
+	margin-bottom:10px;
+}
+.select_editbox .search_searchbox:first-child{
+	margin-top:10px;
+}
+	.search_searchbox p{
+		float:left;
+	}
+	.search_searchbox p.search_check{
+		margin-right:10px;
+	}
+ul.search_list{
+	max-height:180px;
+	margin:10px 0;
+	padding:3px;
+	border:1px solid #aaa;
+	overflow-y:auto;
+}
+ul.search_list li{
+	float:left;
+	width:33.3%;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-wrap:break-word;
+	overflow:hidden;
+}
+
+/*-------------------------------------------------------------schelist*/
+table.calendar_mini{
+	width:100%;
+	border:1px solid #ccc;
+}
+@media screen and (min-width: 960px) {
+	table.calendar_mini{
+		width:70%;
+		margin:10px auto 0;
+	}
+}
+table.calendar_mini th,
+table.calendar_mini td{
+	padding:2px;
+	width:14.285%;
+	border:1px solid #ccc;
+	text-align:center;
+}
+table.calendar_mini th{
+	background:#eee;
+	color:#999;
+	font-weight:normal;
+}
+	table.calendar_mini th.f_subcalender{
+		background:#eee;
+		color:#666;
+	}
+		table.calendar_mini th.sub_holiday{
+			background:#ffdbd7;
+		}
+		table.calendar_mini th.sub_saturday{
+			background:#e4ebfe;
+		}
+table.calendar_mini td{
+	background:#fff;
+	cursor:pointer;
+}
+	table.calendar_mini td:hover{
+		background:#eee;
+	}
+		table.calendar_mini td.sub_today{
+			background:#ffffcc;
+		}
+		table.calendar_mini td.sub_holiday{
+			background:#ffe7e7;
+		}
+		table.calendar_mini td.sub_saturday{
+			background:#ebecff;
+		}
+		table.calendar_mini td.sub_other{
+			color:#aaa;
+		}
+		table.calendar_mini td.sche_on{
+			font-weight:bold;
+			text-decoration:underline;
+		}
+
+		table.calendar_mini a.monthctrl_back_ctrl,
+		table.calendar_mini a.monthctrl_next_ctrl{
+			display:inline-block;
+			line-height:28px;
+			width:28px;
+			height:28px;
+			margin:2px 3px 2px 0;
+			border:1px solid #888;
+			border-radius:3px;
+			background:#ddd;
+			background:-webkit-gradient(linear, center top, center bottom, from(#fff), to(#ccc));
+			background:-webkit-linear-gradient(top, #fff 0%, #ccc 100%);
+			background:linear-gradient(to bottom, #fff 0%, #ccc 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#cccccc');
+			color:#000;
+			font-size:100%;
+			text-align:center;
+		}
+			table.calendar_mini a.monthctrl_back_ctrl:hover ,
+			table.calendar_mini a.monthctrl_next_ctrl:hover{
+				background:#eee;
+				background:-webkit-gradient(linear, center top, center bottom, from(#fff), to(#ddd));
+				background:-webkit-linear-gradient(top, #fff 0%, #ddd 100%);
+				background:linear-gradient(to bottom, #fff 0%, #ddd 100%);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#dddddd');
+			}
+.form_editbox_in{
+	margin:10px 0;
+	border:1px solid #ccc;
+	border-radius:3px;
+}
+.form_editbox_in p.f_form_editbox_in{
+	margin:5px 8px 0;
+	padding:0 5px;
+	border-bottom:1px solid #ccc;
+	color:#666;
+	font-size:90%;
+}
+ul.select_irregular{
+	margin:3px 5px;
+	padding-bottom:5px;
+	overflow:hidden;
+}
+	ul.select_irregular li{
+		display:block;
+		float:left;
+		margin:5px 0 0 8px;
+		padding:2px 6px;
+		background:url("./i_delete.png") no-repeat #fff 5px 50%;
+		border:1px solid #bbb;
+		border-radius:3px;
+		color:#000;
+		text-indent:25px;
+		cursor:pointer;
+	}
+		ul.select_irregular li:hover{
+			background-color:#ddd;
+		}
+ul.select_schelist{
+	padding:3px;
+}
+ul.select_schelist li{
+	float:left;
+	width:33.3%;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	word-wrap:break-word;
+	overflow:hidden;
+}
+
+/*-------------------------------------------------------------memberlist*/
+#member_add.form_editbox,
+#member_add2.form_editbox{
+	width:85%;
+	max-height:80%;
+}
+
+/* �����o�[�ꗗ */
+.select_editbox{
+	width:100%;
+	overflow:hidden;
+}
+
+/* �����o�[�ꗗ �J�e�S�� */
+.select_cotegory{
+	margin:10px 0;
+	box-sizing: border-box;
+}
+p.folder_selected{
+	background:#2980b9;
+	color:#fff;
+}
+	.select_cotegory ul li a{
+		display:block;
+	}
+
+.select_cotegory ul{
+	display:none;
+}
+	.select_cotegory select{
+		display:block;
+	}
+
+@media screen and (min-width:960px){
+	.select_cotegory{
+		float:left;
+		width:35%;
+		border: 1px solid #ccc;
+		overflow-y:auto;
+		height:440px;
+	}
+	.form_editbox .form_editbox .select_cotegory{
+		height:350px;
+	}
+	.select_cotegory ul{
+		display:block;
+	}
+		.select_cotegory select{
+			display:none;
+		}
+		span.op_margin{
+			display:none;
+		}
+}
+
+/*-------------------------------------------------------------memberlist*/
+/* �����o�[���X�g �J�e�S���t�H���_�J�� */
+.folder_cotegory,
+.subfolder_cotegory,
+.folder_cotegory_nofolder,
+.subfolder_cotegory_nofolder{
+	z-index:0;
+	clear:both;
+	margin-top:6px;
+	background: no-repeat 5px 5px;
+	font-size:14px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+	cursor:pointer;
+}
+.folder_cotegory,
+.subfolder_cotegory{
+	background-image:url("./i_bookmarkfolder.png");
+}
+.folder_cotegory_nofolder,
+.subfolder_cotegory_nofolder{
+	background-image:url("./i_bookmarknofolder.png");
+}
+.folder_opend{
+	background-image:url("./i_bookmarkfolder_open.png");
+}
+.nofolder_opend{
+	background-image:url("./i_bookmarknofolder_open.png");
+}
+	.folder_cotegory span.cf_title,
+	.subfolder_cotegory span.cf_title,
+	.folder_cotegory_nofolder span.cf_title,
+	.subfolder_cotegory_nofolder span.cf_title{
+		display:block;
+		width:130px;
+		padding-left:40px;
+		text-overflow:ellipsis;
+		white-space:nowrap;
+		overflow:hidden;
+	}
+
+/* �I�𒆂̃t�H���_ */
+	span.opend_on{
+		color:#fff;
+	}
+	span.name_on{
+		padding:0 2px;
+		background:#2980b9;
+		border:1px dotted #ccc;
+		color:#fff;
+	}
+
+/* �����o�[���X�g �T�u�t�H���_ */
+ul.folderbox li{
+	margin:3px 0 3px 15px;
+	cursor:pointer;
+}
+	ul.folderbox li img{
+		vertical-align:middle;
+		margin-right:4px;
+	}
+
+/* �����o�[�ꗗ ���X�g */
+.select_list_r,
+.select_list_one{
+	margin:10px 0;
+	font-size:13px;
+}
+@media screen and (min-width:960px){
+	.select_list_r{
+		float:right;
+		width:64%;
+		margin:0;
+	}
+}
+
+/* �ۑ��t�H���_�I�� */
+	.select_folder{
+		background:#FFF;
+		border: 1px solid #ccc;
+		border-radius:3px;
+		overflow-y:auto;
+	}
+	.select_folder ul{
+		display:block;
+	}
+		.select_folder select{
+			display:none;
+		}
+		span.op_margin{
+			display:none;
+		}
+		span.clicked{
+			color:#2E8B57;
+			font-weight:bold;
+			background:url("./icon_clicked.png") no-repeat 5px 5px;
+		}
+
+	.select_folder ul li p.folder_cotegory span.cf_title,
+	.select_folder ul li p.subfolder_cotegory span.cf_title,
+	.select_folder ul li p.folder_cotegory_nofolder span.cf_title,
+	.select_folder ul li p.subfolder_cotegory_nofolder span.cf_title{
+		width:90%;
+	}
+
+
+/* �����o�[�ꗗ table */
+table.tab_list{
+	width:100%;
+	margin-bottom:0;
+}
+table.tab_list th{
+	background:#eee;
+	background:-webkit-gradient(linear, left top, left bottom, from(#ddd), color-stop(0.5, #fff), to(#ddd));
+	background:-webkit-linear-gradient(top, #ddd, #fff 50%, #ddd);
+	background:linear-gradient(to bottom, #ddd, #fff 50%, #ddd);
+	border:1px solid #ccc;
+	text-align:center;
+}
+	table.tab_list th.tab_list_check{
+		width:15%;
+	}
+	table.tab_list th.tab_list_name{
+		width:50%;
+	}
+	table.tab_list th.tab_list_time,
+	table.tab_list th.tab_list_department{
+		width:35%;
+	}
+
+/* ���K�ґI�� */
+	table.tab_list th.tab_list_visitcheck{
+		width:15%;
+	}
+	table.tab_list th.tab_list_visitname{
+		width:45%;
+	}
+	table.tab_list th.tab_list_visitdepartment{
+		width:40%;
+	}
+
+@media screen and (min-width:960px){
+	table.tab_list th.tab_list_visitdepartment{
+		display:table-cell;
+		width:40%;
+	}
+}
+
+.list_rollbox{
+	max-height:404px;
+	border-right:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	overflow-y:scroll;
+}
+table.tab_rollbox{
+	width:100%;
+	margin:0;
+}
+table.tab_rollbox td{
+	background:#fff;
+	vertical-align:middle;
+}
+table.tab_rollbox tr:not(:last-child) td{
+	border-bottom:1px solid #ccc;
+}
+	table.tab_rollbox td.tab_list_check{
+		width:15%;
+		border-left:1px solid #ccc;
+		text-align:center;
+	}
+	table.tab_rollbox td.tab_list_name{
+		width:50%;
+	}
+		table.tab_rollbox td.tab_list_name span{
+			width:124px;
+		}
+	table.tab_rollbox td.tab_list_department,
+	table.tab_rollbox td.tab_list_time{
+		width:32%;
+		border-right:1px solid #ccc;
+		color:#578c6e;
+	}
+		table.tab_rollbox td.tab_list_department span{
+			width:74px;
+		}
+
+/* ���K�ґI�� */
+	table.tab_rollbox td.tab_list_visitcheck{
+		width:15%;
+		border-left:1px solid #ccc;
+		text-align:center;
+	}
+	table.tab_rollbox td.tab_list_visitname{
+		width:41%;
+	}
+		table.tab_rollbox td.tab_list_visitname span{
+			width:76px;
+		}
+	table.tab_rollbox td.tab_list_visitdepartment{
+		width:40%;
+		color:#578c6e;
+	}
+		table.tab_rollbox td.tab_list_visitdepartment span{
+			width:76px;
+		}
+
+table.tab_rollbox td span{
+	display:block;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+	overflow:hidden;
+}
+
+@media screen and (min-width:960px){
+		table.tab_rollbox td.tab_list_name span{
+			width:180px;
+		}
+	table.tab_rollbox td.tab_list_department,
+	table.tab_rollbox td.tab_list_time{
+		width:30%;
+	}
+		table.tab_rollbox td.tab_list_department span{
+			width:100px;
+		}
+	table.tab_rollbox td.tab_list_visitname{
+		width:41%;
+	}
+		table.tab_rollbox td.tab_list_visitname span{
+			width:180px;
+		}
+	table.tab_rollbox td.tab_list_visitdepartment{
+		display:table-cell;
+		width:40%;
+		border-right:none;
+		color:#578c6e;
+	}
+		table.tab_rollbox td.tab_list_visitdepartment span{
+			width:180px;
+		}
+}
+
+/* �\���̑I�� */
+ul.ul_monthctrl{
+	width:275px;
+	margin:10px auto 0;
+	overflow:hidden;
+}
+ul.ul_monthctrl li{
+	float:left;
+}
+	ul.ul_monthctrl li.monthctrl_back_ctrl,
+	ul.ul_monthctrl li.monthctrl_next_ctrl{
+		margin-right:5px;
+	}
+		ul.ul_monthctrl li.monthctrl_back_ctrl a,
+		ul.ul_monthctrl li.monthctrl_next_ctrl a{
+			display:block;
+			line-height:28px;
+			width:28px;
+			height:28px;
+			background:#ddd;
+			background:-webkit-gradient(linear, center top, center bottom, from(#fff), to(#ccc));
+			background:-webkit-linear-gradient(top, #fff 0%, #ccc 100%);
+			background:linear-gradient(to bottom, #fff 0%, #ccc 100%);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#cccccc');
+			border:1px solid #888;
+			border-radius:3px;
+			color:#000;
+			font-size:100%;
+			text-align:center;
+		}
+			ul.ul_monthctrl li.monthctrl_back_ctrl a:hover,
+			ul.ul_monthctrl li.monthctrl_next_ctrl a:hover{
+				background:#eee;
+				background:-webkit-gradient(linear, center top, center bottom, from(#fff), to(#ddd));
+				background:-webkit-linear-gradient(top, #fff 0%, #ddd 100%);
+				background:linear-gradient(to bottom, #fff 0%, #ddd 100%);
+				filter:progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#dddddd');
+			}
+ul.ul_monthctrl li.monthctrl_month{
+	float:right;
+}
+
+/*------------------------------------------------------------- layout */
+.note{
+	margin-left:8px;
+	color:#666;
+	font-weight:normal;
+	font-size:90%;
+}
+.modal-overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:1;
+    width:100%;
+    height:120%;
+    background:rgba(43,46,56,.9);
+}
+label + input[type="text"]{
+	margin-left:5px;
+}
+
+/*------------------------------------------------------------- timepicker�ǉ� */
+.timepicker_box{
+	margin-top:6px;
+}
+.timepicker_box ul li{
+	min-width:30px;
+	display:table-cell;
+	text-align:center;
+}
+	.timepicker_box ul li input[type="text"]{
+		width:60px;
+	}
+
+
+/* -------------------------------------------------------------�\���\�i�ҏW�j */
+.ttl_tab{
+	width:100%;
+	margin-top:6px;
+	overflow:hidden;
+}
+.ttl_tab li{
+	margin-right:6px;
+	float:left;
+	padding:3px 6px;
+	border-radius:5px;
+	background:#eee;
+	border:1px dotted #aaa;
+	cursor:pointer;
+}
+	.ttl_tab li:hover{
+		background:#ccc;
+	}
+	.ttl_tab li label{
+		cursor:pointer;
+	}
+	.ttl_tab li.now{
+		background:#bbb;
+	}
+.ttl_tab li a{
+	color:#111;
+}
+.tab_content li.hide{
+	display:none;
+}
+
+
+.form_timeselect span.timeselect_ttl{
+	color:#111;
+	font-weight:bold;
+	display:inline-block;
+}
+
+
+
+/* ------------------------------------------------------------- �ʏ��̗\�� */
+.form_timeselect + .form_timeselect{
+	margin-top:16px;
+}
+.tab_content li.sche_normal .form_timeselect select{
+	margin-right:3px;
+}
+
+/* ------------------------------------------------------------- �����I�ȗ\�� */
+.sche_regularly table.tab_regular{
+	width:440px;
+	margin-bottom:12px;
+	border:1px solid #ccc;
+	background:#fafafa;
+	border-radius:5px;
+}
+.sche_regularly table.tab_regular th{
+	background:#ddd;
+	vertical-align:middle;
+	text-align:center;
+}
+.sche_regularly table.tab_regular td{
+	padding:12px 0 12px 6px;
+	box-sizing:border-box;
+}
+
+.sche_regularly table.tab_regular ul li{
+	margin-bottom:12px;
+}
+	.sche_regularly table.tab_regular ul li:last-child{
+		margin-bottom:0;
+	}
+.sche_regularly table.tab_regular ul li .label-radio{
+	margin-right:3px;
+}
+
+/* �����I�ȗ\���@���t�E���� */
+.tab_content li.sche_regularly .form_timeselect + .form_timeselect{
+	margin-top:16px;
+}
+.sche_regularly li select{
+	height:30px;
+	margin-right:3px;
+}
+li.sche_regularly .form_timeselect select{
+	height:30px;
+	margin-right:3px;
+}
+table.tab_regular dl dd:last-child::after{
+	border:none;
+}
+
+/* ------------------------------------------------------------- �s�����̗\�� */
+.sche_occasionally{
+	width:515px;
+}
+.sche_occasionally .calendar_mini{
+	width:100%;
+	border-collapse:collapse;
+}
+.sche_occasionally table.calendar_mini th.f_subcalender{
+	padding:6px 0;
+	background:#fafafa;
+}
+.schedule_edit td:first-child{
+	background:#ffdbd7;
+}
+.schedule_edit td:last-child{
+	background:#e4ebfe;
+}
+.sche_occasionally .calendar_mini select{
+	height:30px;
+	margin:0 6px;
+}
+.sche_occasionally .form_timeselect select{
+	margin-right:3px;
+}
+.sche_occasionally .form_timeselect span{
+	margin-right:6px;
+}
+span.from_txt{
+	margin-right:6px;
+}
+.sche_occasionally .form_editbox_in{
+	margin-bottom:20px;
+	background:#fff;
+}
+li.sche_occasionally .form_timeselect select{
+	height:30px;
+	margin-right:3px;
+}
+
+/* �ڋq�Ǘ� �l�p�ڋq�O���[�v */
+.personal_client_group{
+	padding:8px 12px 6px;
+	background:linear-gradient(to bottom, #eee, #fff 50%, #ddd);
+	border:1px solid #aaa;
+	border-bottom:3px solid #aaa;
+	border-radius:3px;
+	color:#0099bb;
+}
+/* �ڋq�Ǘ� �l�p�ڋq�O���[�v �I�����ꂽ�O���[�v�\�� */
+ul.form_linklist.client_group_list{
+	margin-top:5px;
+	padding:0;
+}
+ul.form_linklist.client_group_list li{
+	float:left;
+	margin:0;
+	margin-top:5px;
+	margin-right:5px;
+}
+
+.error_txt{
+	margin-top:4px;
+    color:#dd0000;
+} 
+.invisible{
+	display:none;
+}
+
+.btn-setting-toggle{
+	margin-left:8px;
+	border:0;
+	cursor:pointer;
+}
+.btn-setting-toggle img{
+	vertical-align:middle;
+}

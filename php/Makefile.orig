@@ -1,0 +1,174 @@
+IGNORE_DIRS=
+JANUS=/var/www/html/janus
+DATADIR= /var/www/data/room
+
+default: $(JANUS)/addguest.php \
+	$(JANUS)/allowJoin.php \
+	$(JANUS)/answerpush.php \
+	$(JANUS)/app.php \
+	$(JANUS)/change_email.php \
+	$(JANUS)/company_class.php \
+	$(JANUS)/confirmguest.php \
+	$(DATADIR)/db_connect.php \
+	$(JANUS)/deleteguest.php \
+	$(JANUS)/finishmeeting.php \
+	$(JANUS)/getphoto.php \
+	$(JANUS)/getuserlist.php \
+	$(JANUS)/getvideocalllist.php \
+	$(JANUS)/getvoicemaillist.php \
+	$(JANUS)/group_class.php \
+	$(JANUS)/groups_class.php \
+	$(JANUS)/index.php \
+	$(JANUS)/listenmail.php \
+	$(JANUS)/login.php \
+	$(JANUS)/logout.php \
+	$(JANUS)/meeting.php \
+	$(JANUS)/meetingHandle.php \
+	$(JANUS)/meetingInfo.php \
+	$(JANUS)/meeting_class.php \
+	$(JANUS)/meeting_personal.php \
+	$(JANUS)/new_schedule.php \
+	$(JANUS)/playvoicemail.php \
+	$(JANUS)/pushdaemon.php \
+	$(JANUS)/registerguest.php \
+	$(JANUS)/registersipsetting.php \
+	$(JANUS)/registervoicemail.php \
+	$(JANUS)/room.php \
+	$(JANUS)/roomadmin.php \
+	$(JANUS)/roomlogin.php \
+	$(JANUS)/saveHostKey.php \
+	$(JANUS)/savephoto.php \
+	$(JANUS)/savepwd.php \
+	$(JANUS)/schedule.php \
+	$(JANUS)/search_member.php \
+	$(JANUS)/sendpush.php \
+	$(JANUS)/subscribe.php \
+	$(JANUS)/textroom.php \
+	$(JANUS)/unsubscribe.php \
+	$(JANUS)/updateuserinfo.php \
+	$(JANUS)/upload.php \
+	$(JANUS)/user_class.php \
+	$(JANUS)/jscd.js \
+	$(JANUS)/registerServiceWorker.js \
+	$(JANUS)/room.js \
+	$(JANUS)/roomadmin.js \
+	$(JANUS)/service-worker.js \
+	$(JANUS)/sip.js \
+	$(JANUS)/videocall.js \
+	$(JANUS)/voicemail.js
+	@for dir in *; do \
+		if [ ! -d "$$dir" ]; then continue; fi; \
+		for ignore in $(IGNORE_DIRS); do \
+			if [ "$$dir" = "$$ignore" ]; then continue 2; fi \
+		done; \
+		if [ -f "$$dir/Makefile" ]; then (cd $$dir; pwd; $(MAKE)); fi \
+	done;
+
+$(JANUS)/addguest.php: addguest.php
+	sudo cp addguest.php $(JANUS)/
+$(JANUS)/allowJoin.php: allowJoin.php
+	sudo cp allowJoin.php $(JANUS)/
+$(JANUS)/answerpush.php: answerpush.php
+	sudo cp answerpush.php $(JANUS)/
+$(JANUS)/app.php: app.php
+	sudo cp app.php $(JANUS)/
+$(JANUS)/change_email.php: change_email.php
+	sudo cp change_email.php $(JANUS)/
+$(JANUS)/company_class.php: company_class.php
+	sudo cp company_class.php $(JANUS)/
+$(JANUS)/confirmguest.php: confirmguest.php
+	sudo cp confirmguest.php $(JANUS)/
+$(DATADIR)/db_connect.php: db_connect.php
+	sudo cp db_connect.php $(DATADIR)/
+$(JANUS)/deleteguest.php: deleteguest.php
+	sudo cp deleteguest.php $(JANUS)/
+$(JANUS)/finishmeeting.php: finishmeeting.php
+	sudo cp finishmeeting.php $(JANUS)/
+$(JANUS)/getphoto.php: getphoto.php
+	sudo cp getphoto.php $(JANUS)/
+$(JANUS)/getuserlist.php: getuserlist.php
+	sudo cp getuserlist.php $(JANUS)/
+$(JANUS)/getvideocalllist.php: getvideocalllist.php
+	sudo cp getvideocalllist.php $(JANUS)/
+$(JANUS)/getvoicemaillist.php: getvoicemaillist.php
+	sudo cp getvoicemaillist.php $(JANUS)/
+$(JANUS)/group_class.php: group_class.php
+	sudo cp group_class.php $(JANUS)/
+$(JANUS)/groups_class.php: groups_class.php
+	sudo cp groups_class.php $(JANUS)/
+$(JANUS)/index.php: index.php
+	sudo cp index.php $(JANUS)/
+$(JANUS)/listenmail.php: listenmail.php
+	sudo cp listenmail.php $(JANUS)/
+$(JANUS)/login.php: login.php
+	sudo cp login.php $(JANUS)/
+$(JANUS)/logout.php: logout.php
+	sudo cp logout.php $(JANUS)/
+$(JANUS)/meeting.php: meeting.php
+	sudo cp meeting.php $(JANUS)/
+$(JANUS)/meetingHandle.php: meetingHandle.php
+	sudo cp meetingHandle.php $(JANUS)/
+$(JANUS)/meetingInfo.php: meetingInfo.php
+	sudo cp meetingInfo.php $(JANUS)/
+$(JANUS)/meeting_class.php: meeting_class.php
+	sudo cp meeting_class.php $(JANUS)/
+$(JANUS)/meeting_personal.php: meeting_personal.php
+	sudo cp meeting_personal.php $(JANUS)/
+$(JANUS)/new_schedule.php: new_schedule.php
+	sudo cp new_schedule.php $(JANUS)/
+$(JANUS)/playvoicemail.php: playvoicemail.php
+	sudo cp playvoicemail.php $(JANUS)/
+$(JANUS)/pushdaemon.php: pushdaemon.php
+	sudo cp pushdaemon.php $(JANUS)/
+$(JANUS)/registerguest.php: registerguest.php
+	sudo cp registerguest.php $(JANUS)/
+$(JANUS)/registersipsetting.php: registersipsetting.php
+	sudo cp registersipsetting.php $(JANUS)/
+$(JANUS)/registervoicemail.php: registervoicemail.php
+	sudo cp registervoicemail.php $(JANUS)/
+$(JANUS)/room.php: room.php
+	sudo cp room.php $(JANUS)/
+$(JANUS)/roomadmin.php: roomadmin.php
+	sudo cp roomadmin.php $(JANUS)/
+$(JANUS)/roomlogin.php: roomlogin.php
+	sudo cp roomlogin.php $(JANUS)/
+$(JANUS)/saveHostKey.php: saveHostKey.php
+	sudo cp saveHostKey.php $(JANUS)/
+$(JANUS)/savephoto.php: savephoto.php
+	sudo cp savephoto.php $(JANUS)/
+$(JANUS)/savepwd.php: savepwd.php
+	sudo cp savepwd.php $(JANUS)/
+$(JANUS)/schedule.php: schedule.php
+	sudo cp schedule.php $(JANUS)/
+$(JANUS)/search_member.php: search_member.php
+	sudo cp search_member.php $(JANUS)/
+$(JANUS)/sendpush.php: sendpush.php
+	sudo cp sendpush.php $(JANUS)/
+$(JANUS)/subscribe.php: subscribe.php
+	sudo cp subscribe.php $(JANUS)/
+$(JANUS)/textroom.php: textroom.php
+	sudo cp textroom.php $(JANUS)/
+$(JANUS)/unsubscribe.php: unsubscribe.php
+	sudo cp unsubscribe.php $(JANUS)/
+$(JANUS)/updateuserinfo.php: updateuserinfo.php
+	sudo cp updateuserinfo.php $(JANUS)/
+$(JANUS)/upload.php: upload.php
+	sudo cp upload.php $(JANUS)/
+$(JANUS)/user_class.php: user_class.php
+	sudo cp user_class.php $(JANUS)/
+$(JANUS)/jscd.js: jscd.js
+	sudo cp jscd.js $(JANUS)/
+$(JANUS)/registerServiceWorker.js: registerServiceWorker.js
+	sudo cp registerServiceWorker.js $(JANUS)/
+$(JANUS)/room.js: room.js
+	sudo cp room.js $(JANUS)/
+$(JANUS)/roomadmin.js: roomadmin.js
+	sudo cp roomadmin.js $(JANUS)/
+$(JANUS)/service-worker.js: service-worker.js
+	sudo cp service-worker.js $(JANUS)/
+$(JANUS)/sip.js: sip.js
+	sudo cp sip.js $(JANUS)/
+$(JANUS)/videocall.js: videocall.js
+	sudo cp videocall.js $(JANUS)/
+$(JANUS)/voicemail.js: voicemail.js
+	sudo cp voicemail.js $(JANUS)/

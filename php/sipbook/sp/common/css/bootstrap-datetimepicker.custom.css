@@ -1,0 +1,171 @@
+@charset="utf-8";
+
+.input-group{
+	position:relative;
+}
+
+.glyphicon-chevron-up:before,
+.glyphicon-chevron-up:after,
+.glyphicon-chevron-down:before,
+.glyphicon-chevron-down:after{
+    display:block;
+    position:absolute;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	width:16px;
+	height:16px;
+	margin:auto;
+	-webkit-transform:rotate(45deg);
+		-ms-transform:rotate(45deg);
+			transform:rotate(45deg);
+    content:"";
+}
+.glyphicon-chevron-up:before{
+	top:5px;
+    background:#d41548;
+}
+.glyphicon-chevron-up:after{
+	top:11px;
+    background:#fff;
+}
+.glyphicon-chevron-down:before{
+	bottom:5px;
+    background:#d41548;
+}
+.glyphicon-chevron-down:after{
+	bottom:11px;
+    background:#fff;
+}
+.glyphicon-chevron-left:before,
+.glyphicon-chevron-left:after,
+.glyphicon-chevron-right:before,
+.glyphicon-chevron-right:after{
+    display:block;
+    position:absolute;
+	top:-10px;
+	right:0;
+	bottom:0;
+	left:0;
+	width:12px;
+	height:12px;
+	margin:auto;
+	-webkit-transform:rotate(45deg);
+		-ms-transform:rotate(45deg);
+			transform:rotate(45deg);
+    content:"";
+}
+.glyphicon-chevron-left:before{
+	left:-5px;
+    background:#d41548;
+}
+.glyphicon-chevron-left:after{
+	left:0;
+    background:#fff;
+}
+.glyphicon-chevron-right:before{
+	left:-7px;
+    background:#d41548;
+}
+.glyphicon-chevron-right:after{
+	left:-13px;
+    background:#fff;
+}
+.glyphicon-calendar:before,
+.glyphicon-calendar:after,
+.glyphicon-time:before,
+.glyphicon-time:after,
+.glyphicon-remove:before,
+.glyphicon-remove:after,
+.glyphicon-trash:before,
+.glyphicon-trash:after{
+	display:inline-block;
+	vertical-align:middle;
+}
+.glyphicon-calendar:before,
+.glyphicon-time:before,
+.glyphicon-remove:before,
+.glyphicon-trash:before{
+	width:13px;
+	height:13px;
+	margin-right:4px;
+	background:url("../images/icon_datetimepicker.png") 0/auto 13px no-repeat;
+	content:"";
+}
+.glyphicon-calendar:after,
+.glyphicon-time:after,
+.glyphicon-remove:after,
+.glyphicon-trash:after{
+	position:relative;
+}
+.glyphicon-calendar:after{
+	content:"日付";
+}
+.glyphicon-time:before{
+	background-position:-13px 0;
+}
+.glyphicon-time:after{
+	content:"時間";
+}
+.glyphicon-remove:before{
+	background-position:-26px 0;
+}
+.glyphicon-remove:after{
+	content:"閉じる";
+}
+.glyphicon-trash:before{
+	background-position:-39px 0;
+}
+.glyphicon-trash:after{
+	content:"リセット";
+}
+
+.bootstrap-datetimepicker-widget table thead tr:first-child th.prev:hover .glyphicon-chevron-left:after,
+.bootstrap-datetimepicker-widget table thead tr:first-child th.next:hover .glyphicon-chevron-right:after{
+  background:#eee;
+}
+.bootstrap-datetimepicker-widget table td.today:before {
+  border-bottom-color:#d41548;
+}
+.bootstrap-datetimepicker-widget table td.active,
+.bootstrap-datetimepicker-widget table td.active:hover,
+.bootstrap-datetimepicker-widget table td span.active{
+  background-color:#d41548;
+  text-shadow:none;
+}
+
+.bootstrap-datetimepicker-widget table td span.glyphicon-chevron-up:hover:after,
+.bootstrap-datetimepicker-widget table td span.glyphicon-chevron-down:hover:after{
+  background:#eee;
+}
+.bootstrap-datetimepicker-widget a[data-action]{
+	padding:0;
+}
+.form-control{
+	margin:0 !important;
+	background:url("../images/calendar_icon.png") center right 8px/18px no-repeat;
+}
+.datepicker-YMD .form-control{
+	width:160px;
+}
+.datepicker-YM-l .form-control{
+	width:144px;
+	font-size:18px;
+}
+.datepicker-YMD-l .form-control{
+	width:184px;
+	font-size:18px;
+}
+.timepicker-Hm .form-control{
+	width:112px;
+}
+.datetimepicker-YMDHm .form-control{
+	width:200px;
+}
+.timepicker .btn{
+	margin:0;
+	background:none;
+	border:none;
+	box-shadow:none;
+}

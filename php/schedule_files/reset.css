@@ -1,0 +1,99 @@
+@charset "Shift_JIS";
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+pre, code {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	background: transparent;
+}
+body {
+	/*font-family: "Meiryo","ÉÅÉCÉäÉI","Hiragino Kaku Gothic Pro","ÉqÉâÉMÉmäpÉS Pro W3",,Osaka,"ÇlÇr ÇoÉSÉVÉbÉN","MS PGothic",Sans-Serif,verdana;*/
+	font-family: ÅgCalibriÅh,ÅhÉÅÉCÉäÉIÅh,Meiryo,ÅhÉqÉâÉMÉmäpÉS Pro W3Åç,Hiragino Kaku Gothic Pro,ÅhÇlÇr ÇoÉSÉVÉbÉNÅh,sans-serif;
+	font-size: 80%;
+	line-height: 1.8;
+}
+html>/**/body {
+	font-size: 13px;
+}
+* + html body {
+	font-family: "ÉÅÉCÉäÉI","Meiryo";
+}
+h1, h2, h3, h4, h5, h6{
+	font-size: 100%;
+	font-weight: normal;
+}
+table, td, th {
+	font-size: 100%;
+}
+address, caption, cite, code, dfn, em, var,/* strong */
+input, button, textarea, select, optgroup, option {
+	font-size: 100%;
+	font-family: arial,helvetica,sans-serif;
+	font-style: normal;
+	font-weight: normal;
+}
+ul, li {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+hr {
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #cccccc;
+	margin: 0;
+	padding: 0;
+}
+input, select, button {
+	vertical-align: middle;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+pre, code, kbd, samp {
+	font-family: arial,helvetica,sans-serif;
+	font-size:100%;
+	line-height:100%;
+}
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+abbr, dfn {
+	border-bottom: 1px dotted #000;
+	cursor: help;
+}
+/* form */
+button, fieldset, form, input, label, legend, select, textarea {
+font-family:inherit;
+font-size:100%;
+font-style:inherit;
+font-weight:inherit;
+margin:0;
+padding:0;
+vertical-align:middle;
+}
+a {	outline:none;}
+
+html{
+overflow-y:scroll;
+}

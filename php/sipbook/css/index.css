@@ -1,0 +1,135 @@
+/*
+ *	Copyright (c) 2014 The WebRTC project authors. All Rights Reserved.
+ *
+ *	Use of this source code is governed by a BSD-style license
+ *	that can be found in the LICENSE file in the root of the source
+ *	tree.
+ */
+
+html {
+	height: 100%;
+	margin: 0;
+	width: 100%;
+}
+
+body {
+	background-color: #333;
+	font-family: 'Roboto', 'Open Sans', 'Lucida Grande', sans-serif;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	color: #fff;
+}
+
+h1 {
+	font-weight: 300;
+	margin: 0 0 0.8em 0;
+	padding: 0 0 0.2em 0;
+}
+
+p {
+	color: #eee;
+	font-weight: 300;
+	line-height: 1.6em;
+}
+
+footer > div {
+	background-color: black;
+	bottom: 0;
+	color: white;
+	display: none;
+	font-size: .9em;
+	font-weight: 300;
+	line-height: 2em;
+	max-height: 80%;
+	opacity: 0;
+	overflow-y: auto;
+	padding: 10px;
+	position: absolute;
+	transition: opacity 1s;
+	width: calc(100% - 20px);
+}
+
+footer > div.active {
+	display: block;
+	opacity: .8;
+}
+
+label {
+	margin: 0 10px 0 0;
+}
+
+a {
+	color: #4285F4;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #3B78E7;
+	text-decoration: underline;
+}
+
+button {
+	width: auto;
+	padding:0;
+	margin:0;
+	background:none;
+	border:0;
+	font-size:0;
+	line-height:0;
+	overflow:visible;
+	cursor:pointer;
+	outline:none;
+}
+
+.hidden {
+	display: none;
+}
+
+hr.both-clear {
+	visibility:hidden;
+	color: transparent;
+	clear: both;
+}
+
+.dtable{
+	display: table;
+}
+.dtable_c{
+	padding: 3px;
+	display: table-cell;
+	border: 0px solid #666;
+	color: #000;
+}
+
+#login-select {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	-webkit-transform: translateY(-50%) translateX(-50%);
+}
+.sns-button {
+	width: 128px;
+	height: 128px;
+	margin: 1px;
+}
+.facebook-back {
+    background-color: #4267b2;
+}
+.twitter-back {
+    background-color: #1da1f2;
+}
+.google-back {
+    background-color: #ffffff;
+	/*
+    background-color: #6cb6f7;
+    */
+}
+.hotbiz-back {
+    background-color: #ffffff;
+	/*
+    background-color: #43c408;
+    */
+}

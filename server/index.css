@@ -1,0 +1,38 @@
+.dialog-div {
+	display: none;
+	background-color: #ffffff;
+}
+.hide {
+	display: none;
+}
+.save {
+	display: none;
+}
+.pull-left {
+	float:left!important
+}
+#videocallDropdown li.online a {
+	background-image: url("./images/online.png");
+	background-position: right;
+	background-origin: content-box;
+	background-size: 18px 18px;
+	background-repeat: no-repeat;
+}
+#changePictureDialog .preview-container {
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin-left: 20px;
+	overflow: hidden;
+}
+#changePictureDialog .original-container .loading {
+	display: none;
+	background-color: #ddd;
+	left: 0;
+	top: 0;
+	width: 500px;
+	height: 310px;
+	padding: 130px 100px;
+	position: absolute;
+	z-index: 5000;
+}

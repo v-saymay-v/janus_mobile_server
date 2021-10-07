@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/* Layout ユーザー画面_ログイン-PC
+***********************************************************************/
+*,
+:before,
+:after{
+	box-sizing:border-box;
+}
+body,
+input,
+select,
+textarea,
+button{
+	line-height:1;
+	color:#333;
+	font-size:16px;
+	font-family:"游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+	letter-spacing:.02em;
+	word-wrap:break-word;
+}
+.page-login{
+    width:400px;
+    margin:180px auto;
+    background:#f2f3f3;
+}
+.page_ttl{
+    font-size:4em;
+    margin-bottom:80px;
+}
+.page_ttl img{
+    width:100%;
+}
+.login_dl dt{
+    font-weight:bold;
+    color:#727171;
+}
+.login_dl input{
+    font-size:1.3em;
+    width:400px;
+    margin:15px 0 30px;
+    padding:.3em;
+    background:transparent;
+    border:0;
+    border-bottom:2px solid #727171;
+    transition:.3s;
+}
+.login_dl input:focus{
+    outline:none;
+    border-color:#d41548;
+}
+.btn_area{
+	width:400px;
+    margin-top:20px;
+}
+.login_btn{
+    outline:none;
+    width:400px;
+    padding:22px 0;
+    background:#d41548;
+    border:0;
+    border-radius:5px;
+    font-weight:bold;
+    color:#fff;
+    cursor:pointer;
+}
+.login_btn:hover{
+    opacity:.5;
+    transition:.3s;
+}
